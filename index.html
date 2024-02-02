@@ -4,49 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock-Paper-Scissors</title>
+    <script src="./script.js"></script>
 </head>
 <body>
-    <script>
-        function getComputerChoice() {
-            let choice = Math.random() *3;
-            if (choice <= 1) {
-                choice = "rock";
-            }else if (choice <= 2) {
-                choice = "paper";
-            }else {
-                choice = "scissors";
-            }
-            return choice;
-        }
-
-        function playRound(playerSelection, computerSelection) {
-            if (playerSelectionLower == "rock" && computerSelection == "scissors") {
-                return("Rock beats scissors - You Win!");
-            }else if (playerSelectionLower == "rock" && computerSelection == "paper") {
-                return("Paper beats rock! Computer wins!!");
-            }else if (playerSelectionLower == "scissors" && computerSelection == "paper") {
-                return("Scissors beat paper! You win!");
-            }else if (playerSelectionLower == "scissors" && computerSelection == "rock") {
-                return("Rock beats scissors! Computer wins!")
-            }else if (playerSelectionLower == "paper" && computerSelection == "rock") {
-                return("Paper beats rock! You win!")
-            }else if (playerSelectionLower == "paper" && computerSelection == "scissors") {
-                return("Scissors beat paper! Computer wins!")
-            }else {
-                return("It's a draw! play again!");
-            }
-        }
-
-        function game() {
-
-        }
-
-        const playerSelection = prompt("Select rock, paper or scissors:");
-        const playerSelectionLower = playerSelection.toLowerCase();
-        const computerSelection = getComputerChoice();
-        console.log(playRound(playerSelection, computerSelection));
-        console.log("cpu selection: ", computerSelection);
-        console.log("player selection: ", playerSelectionLower);
-    </script>
 </body>
 </html>
